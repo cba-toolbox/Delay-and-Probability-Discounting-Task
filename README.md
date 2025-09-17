@@ -6,6 +6,6 @@ VSCodeでR Terminalを開いて、以下のRコードのname_of_repositoryをリ
 
 
 ```
-psyinfr::set_cbat("name_of_repository","8.2.1",use_rc=2)
+psyinfr::set_cbat("Delay-Probability-Discounting","8.2.2",use_rc=2)
 
 ```
