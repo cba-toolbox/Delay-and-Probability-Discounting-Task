@@ -1,0 +1,16 @@
+
+.trial-button {
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  padding: 20px 24px;
+  font-size: 36px;
+}
+
+.trial-button:hover {
+  background: #2F2F2F;
+}
