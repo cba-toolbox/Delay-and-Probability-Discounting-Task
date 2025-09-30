@@ -19,7 +19,7 @@
 (2C) 提示報酬額が上限最小値よりも大きい場合、上限最小値は提示報酬額に更新され、上限最大値は「標準」値に初期化されます。
 
 各上限と上限の差が 50 円以下に達すると、その提示報酬額が無関心点の推定値として記録されます。
-特定の時間的または確率的遅延に対する無関心点が決定された場合、当該の試行はそれ以上実行されません。 
+特定の時間的または確率的遅延に対する無関心点が決定された場合、当該の試行はそれ以上実行されません。
 
 上限最大値、上限最小値、下限最大値、下限最小値の定義は以下の通りです。
 (1) 上限最大値 (tmax)、上限最小値 (tmin)
@@ -142,8 +142,8 @@ const setFullScreen = () => {
     return {
       type: jsPsychFullscreen,
       message: "<p><span style='font-size:20pt;'>それでは課題をはじめます。</span></p>" +
-               "<p><span style='font-size:20pt;'>以下の「開始」を押すと，全画面になって課題がはじまります。</span></p>" + 
-               "<p><span style='font-size:20pt;'>課題を途中で終了する場合は、エスケープ キーを押して全画面を解除し、</span></p>" + 
+               "<p><span style='font-size:20pt;'>以下の「開始」を押すと，全画面になって課題がはじまります。</span></p>" +
+               "<p><span style='font-size:20pt;'>課題を途中で終了する場合は、エスケープ キーを押して全画面を解除し、</span></p>" +
                "<p><span style='font-size:20pt;'>ブラウザーを閉じてください。</span></p>",
       button_label: "<p style='font-size:20px'>開始</p>",
       fullscreen_mode: true,
@@ -171,28 +171,27 @@ const showTaskInstruction = () => ({
   type: jsPsychInstructions,
   pages: [
     // 1 ページ目
-    '<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
-    'これから、様々な金額の報酬を、いくらかの遅延の後、あるいはいくらかの確率で受け取ることが出来る' +
-    '選択の機会が与えられます。<br>' +
-    'このテストは、約 110 個の以下に示すような質問で構成されています。</p>' +
+    '<p style="font-size: 22px; line-height: 1.8em; width: 800px;">' +
+    'この課題では、お金についての様々な選択を行って頂きます。<br>' +
+    '質問は約 110 個あります。例えば，下記のような質問が出てきます。</p>' +
     '<p style="font-size: 22px;">「今すぐに 200 円を受け取るか、30日後に 1000 円を受け取るか」</p>' +
-    '<p style="font-size: 22px;">あるいは、</p>' +
     '<p style="font-size: 22px;">「確実に 500 円を受け取るか、25％ の確率で 1000 円を受け取るか」</p>' +
-    '<p style="font-size: 16px; line-height: 3.6em;">[続行]をクリックして、次のページを表示してください。</p>',
+    '<p style="font-size: 22px; width: 800px;">それぞれの質問に対し，自分ならどちらを選択するかを答えてください。</p>' +
+    //'<p style="font-size: 16px; line-height: 3.6em;">[続行]をクリックして、次のページを表示してください。</p>',
 
     // 2 ページ目
-    '<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
-    'この課題が終わったら、あなたが解答した質問の中からランダムに 1 つの質問が選択されますので、' +
-    'そこで選択したものを報酬として受け取ります。</p>' +
-    '<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
-    '・<u>すぐに報酬を受け取る選択肢</u>を選択した場合、この課題の終了時に現金でその金額を受け取ることができます。</p>' +
-    '<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
-    '・<u>受け取りに遅延を伴う選択肢</u>を選択した場合、そのお金はあなたの名前が書かれた封筒に入れられ、' +
-    '時間が経過すると受け取ることができます。</p>' +
-    '<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
-    '・<u>確率的に報酬を受け取る選択肢</u>を選択した場合は、確率を反映した比率でそのお金を受け取ることが出来ます。<br>' +
-    '　例えば選択した選択肢が「25％の確率で 1000 円を受け取る」だった場合、1000円を25%の確率で受け取ることができ、' +
-    '75%の確率で0円となります。</p>' +
+    //'<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
+    //'この課題が終わったら、あなたが解答した質問の中からランダムに 1 つの質問が選択されますので、' +
+    //'そこで選択したものを報酬として受け取ります。</p>' +
+    //'<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
+    //'・<u>すぐに報酬を受け取る選択肢</u>を選択した場合、この課題の終了時に現金でその金額を受け取ることができます。</p>' +
+    //'<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
+    //'・<u>受け取りに遅延を伴う選択肢</u>を選択した場合、そのお金はあなたの名前が書かれた封筒に入れられ、' +
+    //'時間が経過すると受け取ることができます。</p>' +
+    //'<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
+    //'・<u>確率的に報酬を受け取る選択肢</u>を選択した場合は、確率を反映した比率でそのお金を受け取ることが出来ます。<br>' +
+    //'　例えば選択した選択肢が「25％の確率で 1000 円を受け取る」だった場合、1000円を25%の確率で受け取ることができ、' +
+    //'75%の確率で0円となります。</p>' +
     '<p style="font-size: 16px; line-height: 3.6em;">[続行]をクリックすると、課題が開始されます。</p>',
   ],
   button_label_next: '続行',
@@ -326,8 +325,7 @@ const showEndInstruction = () => ({
   type: jsPsychInstructions,
   pages: [
     '<p style="font-size: 22px; line-height: 1.8em; text-align: left; width: 800px;">' +
-    '課題は終了しました。終了ボタンをクリックすると、結果が保存されて課題画面が消えます。' +
-    'その後、ブラウザーを閉じてください。<br>ご参加、ありがとうございました。</p>',
+    'この課題は終了です。<br>終了ボタンを押すと、結果が保存されて，次の課題に進みます。',
   ],
   button_label_next: '終了',
   button_label_previous: '戻る',
@@ -393,7 +391,7 @@ const cancelFullScreen = () => ({
   // 各試行のパラメーターを連想配列にまとめます。
   const parametersMap = {};
   trialParameters.forEach((trial) => { parametersMap[trial.name] = trial; });
-  
+
   // 設定オブジェクトを作成して返します。
   return {
     ...userSettings,
@@ -447,7 +445,7 @@ const getRewardValue = (parameters, step) => {
  */
 const getStimulousString = (settings, trialName) => {
   const parameters = settings.parameters[trialName];
-  
+
   if (parameters.type === 'temporal_delay') {
     const values = {
       var: settings.variables.reword,
@@ -480,11 +478,11 @@ const updateParameters = (response, reword, parameters, standard, threshold) => 
     case 'A':
       if(reword < parameters.bmin) {
         // 条件 (1C) に相当します。
-        parameters.bmax = 0; 
+        parameters.bmax = 0;
         parameters.bmin = reword;
       } else if (reword <= parameters.tmin) {
         // 条件 (1B) に相当します。
-        parameters.tmax = parameters.tmin; 
+        parameters.tmax = parameters.tmin;
         parameters.tmin = reword;
       } else {
         // 条件 (1A) に相当します。
@@ -494,11 +492,11 @@ const updateParameters = (response, reword, parameters, standard, threshold) => 
     case 'B':
       if (parameters.tmin < reword) {
         // 条件 (2C) に相当します。
-        parameters.tmax = standard; 
+        parameters.tmax = standard;
         parameters.tmin = reword;
       } else if (parameters.bmin < reword) {
         // 条件 (2A) に相当します。
-        parameters.bmax = parameters.bmin; 
+        parameters.bmax = parameters.bmin;
         parameters.bmin = reword;
       } else {
         // 条件 (2B) に相当します。
@@ -510,10 +508,10 @@ const updateParameters = (response, reword, parameters, standard, threshold) => 
       console.log(`不正なレスポンスが与えられました。(response: ${response})`)
       return;
   }
-	
+
   // 無関心点が決定された場合は値をパラメーターに格納します。
 	if (parameters.tmax - parameters.bmax <= threshold) {
-		parameters.ip = reword; 
+		parameters.ip = reword;
 	}
 };
 
@@ -656,4 +654,3 @@ const saveData = (data, settings, parameters) => {
  * jsPsych が定義された課題シーケンスを実行します。
  */
 var timeline = prepareTimeline();
-
